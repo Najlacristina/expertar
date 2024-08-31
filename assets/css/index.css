@@ -76,7 +76,7 @@
 }
 
 #hero .container-menu.scrolled .logo a img {
-    content: url('/assets/images/logo.svg');
+    content: url('../../assets/images/logo.svg');
 }
 
 #hero #content-wrapper #content-copy h1 {
