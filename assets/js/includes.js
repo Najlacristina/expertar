@@ -42,7 +42,7 @@ async function load_author_includes(filePath, targetSelector, authorName, postCo
 // Função para contar o número de posts de cada autor
 async function countPosts() {
     try {
-        const response = await fetch('/blog/posts.json');
+        const response = await fetch('../blog/posts.json');
         if (!response.ok) {
             throw new Error('Erro ao carregar /blog/posts.json');
         }
@@ -82,7 +82,7 @@ async function initializeAuthors() {
 }
 
 // CARREGAR HEADER
-load_includes('includes/nav-links.html', 'nav-links');
+load_includes('../includes/nav-links.html', 'nav-links');
 
 
 // Função para obter categorias únicas dos posts
