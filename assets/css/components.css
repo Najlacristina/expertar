@@ -33,7 +33,7 @@
 }
 
 .container-menu.scrolled .logo a img {
-    content: url('/assets/images/logo.svg');
+    content: url('../../assets/images/logo.svg');
 }
 
 #menu .container {
