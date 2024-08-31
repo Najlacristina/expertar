@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAuthors();
     
     // Carregar depoimentos, aliados, monitores e footer
-    load_includes('/includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
-    load_includes('/includes/aliados.html', 'aliados-monitores');
+    load_includes('../..//includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
+    load_includes('../..//includes/aliados.html', 'aliados-monitores');
     load_includes('../../includes/footer.html', 'footer');
     
 });
