@@ -1,7 +1,14 @@
+// Função para obter o diretório base do site
+function getBaseDirectory() {
+    const base = window.location.pathname;
+    return base.endsWith('/') ? base : base + '/';
+}
+
 // Função para carregar o conteúdo de um arquivo HTML e inseri-lo nos elementos alvo
 async function load_includes(filePath, targetSelector) {
     try {
-        const response = await fetch(filePath);
+        const baseDirectory = getBaseDirectory();
+        const response = await fetch(baseDirectory + filePath);
         if (!response.ok) {
             throw new Error(`Erro ao carregar ${filePath}`);
         }
@@ -20,7 +27,8 @@ async function load_includes(filePath, targetSelector) {
 // Função para carregar o conteúdo de um arquivo HTML específico para autores e atualizar a contagem de posts
 async function load_author_includes(filePath, targetSelector, authorName, postCount) {
     try {
-        const response = await fetch(filePath);
+        const baseDirectory = getBaseDirectory();
+        const response = await fetch(baseDirectory + filePath);
         if (!response.ok) {
             throw new Error(`Erro ao carregar ${filePath}`);
         }
@@ -42,9 +50,10 @@ async function load_author_includes(filePath, targetSelector, authorName, postCo
 // Função para contar o número de posts de cada autor
 async function countPosts() {
     try {
-        const response = await fetch('expertar/blog/posts.json');
+        const baseDirectory = getBaseDirectory();
+        const response = await fetch(baseDirectory + 'blog/posts.json');
         if (!response.ok) {
-            throw new Error('Erro ao carregar blog/posts.json');
+            throw new Error('Erro ao carregar /blog/posts.json');
         }
         const posts = await response.json();
 
@@ -75,15 +84,14 @@ async function initializeAuthors() {
         // Substitua espaços por hífens e converta para minúsculas para corresponder ao nome do arquivo
         const targetSelector = author.toLowerCase().replace(/\s+/g, '-');
         const postCount = authorPostCount[author];
-        const filePath = `/includes/autores/${targetSelector}.html`;
+        const filePath = `includes/autores/${targetSelector}.html`;
 
         load_author_includes(filePath, targetSelector, author, postCount);
     });
 }
 
 // CARREGAR HEADER
-load_includes('../includes/nav-links.html', 'nav-links');
-
+load_includes('includes/nav-links.html', 'nav-links');
 
 // Função para obter categorias únicas dos posts
 function getUniqueCategories(posts) {
@@ -130,7 +138,6 @@ function renderCategories(categories, posts) {
     }
 }
 
-
 // Inicializar a criação dos cards com busca e categorias dinâmicas
 async function initSearchAndCategories() {
     const posts = await loadPosts();
@@ -160,5 +167,4 @@ document.addEventListener('DOMContentLoaded', function() {
     load_includes('includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
     load_includes('includes/aliados.html', 'aliados-monitores');
     load_includes('includes/footer.html', 'footer');
-    
 });
