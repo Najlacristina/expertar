@@ -42,9 +42,9 @@ async function load_author_includes(filePath, targetSelector, authorName, postCo
 // Função para contar o número de posts de cada autor
 async function countPosts() {
     try {
-        const response = await fetch('blog/posts.json');
+        const response = await fetch('expertar/blog/posts.json');
         if (!response.ok) {
-            throw new Error('Erro ao carregar /blog/posts.json');
+            throw new Error('Erro ao carregar blog/posts.json');
         }
         const posts = await response.json();
 
