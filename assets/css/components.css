@@ -1,0 +1,414 @@
+/* header.html */
+#header {
+    top: 0px;
+    left: 0;
+    width: 100%;
+    max-width: 1140px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.container-menu {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0px;
+
+    width: 100%;
+    max-width: 100% !important;
+    z-index: 10;
+    padding: 20px 0px;
+    transition: all .6s;
+}
+
+.container-menu.scrolled {
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 0px;
+}
+
+.container-menu.scrolled .logo a img {
+    content: url('/assets/images/logo.svg');
+}
+
+#menu .container {
+    padding: 30px 0px 0px 0px;
+}
+
+.logo img {
+    width: 115px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+
+    gap: 28px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #16171E !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+
+}
+
+.nav-links li  {
+    position: relative;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #16171E;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*  ESSE MEDIA QUERY TRATA EXCLUSIVAMENTO DO MENU. MAIS PARA BAIXO TEM OUTRO, REFERENTE A SECÇÃO EM SI */
+@media(max-width: 767px) {
+    #header {
+        top: 0px;
+        left: 0;
+        width: 100%;
+        max-width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999 !important;
+        padding: 0 10px;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 0%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: rgb(30,175,190);
+        background: -moz-linear-gradient(150deg, rgba(30,175,190,1) 0%, rgba(0,98,108,1) 41%, rgba(1,20,33,1) 92%);
+        background: -webkit-linear-gradient(150deg, rgba(30,175,190,1) 0%, rgba(0,98,108,1) 41%, rgba(1,20,33,1) 92%);
+        background: linear-gradient(150deg, rgba(30,175,190,1) 0%, rgba(0,98,108,1) 41%, rgba(1,20,33,1) 92%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1eafbe",endColorstr="#011421",GradientType=1);
+        height: 100% !important;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li a {
+        font-size: 24px;
+        color: #fff !important
+    }
+
+    
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links.open li {
+        opacity: 1 !important;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+
+    li.fade {
+        opacity: 1 !important;
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+    background-color: #fff;
+}
+
+.toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+    background-color: #fff;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+    background-color: #fff;
+}
+
+
+
+/* footer.html */
+footer {
+    background-color: #F2F7F7 !important;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0px;
+}
+
+footer .wpp svg {
+    position: fixed !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: auto;
+    z-index: 999;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .copy-wrapper {
+    width: 40%;
+}
+
+footer .menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    width: 60%;
+}
+
+footer .menu-item {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+footer .menu-item h6 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: left;
+    
+}
+
+footer .menu-item a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: var(--global-color-text);
+    transition: all .4s linear;
+}
+
+footer .menu-item a:hover {
+    color: var(--global-color-black);
+    transition: all .4s linear;
+
+}
+
+@media(max-width: 767px) {
+    footer .container {
+        flex-direction: column;
+        padding: 30px 10px;
+    }
+
+    footer .container .copy-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .menu-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .menu-wrapper .menu-item {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* blog */
+/* CARD ITEM */
+.cards-wrapper .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    width: 32%;
+}
+
+.cards-wrapper .card-item .card-header {
+    position: relative;
+}
+
+.cards-wrapper .card-item .card-header img {
+    border-radius: 8px;
+}
+
+.cards-wrapper .card-item .card-header .tag-category {
+    position: absolute;
+    bottom: 18px;
+    left: 12px;
+
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 32px;
+    border: 1px solid rgba( 255, 255, 255, 0.30 );
+
+    font-size: 12px;
+    color: var(--global-color-white);
+    padding: 8px 16px;
+    padding-bottom: 6px;
+    min-width: none;
+}
+
+.cards-wrapper .card-item .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cards-wrapper .card-item .card-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cards-wrapper .card-item .card-content p {
+    font-size: 14px;
+}
+
+.cards-wrapper .card-item .card-footer,
+.cards-wrapper .card-item .card-footer .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.cards-wrapper .card-item .card-footer .author img {
+    width: 32px;
+    border-radius: 32px;
+}
+
+.cards-wrapper .card-item .card-footer .author h6,
+.cards-wrapper .card-item .card-footer .post-date {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cards-wrapper .card-item .card-footer .divider {
+    width: 4px;
+    height: 4px;
+    background-color: var(--global-color-one);
+    border-radius: 4px;
+}
+
+
+
+
+/* cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f7f7;
+    color: #000;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-banner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background-color: #45a049;
+}
+
+.cookie-banner.hidden {
+    display: none !important; /* Ocultar o banner quando a classe "hidden" for adicionada */
+}

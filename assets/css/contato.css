@@ -1,0 +1,96 @@
+/* ENTRE EM CONTATO */
+#entre-em-contato .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+#entre-em-contato .c-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#entre-em-contato .container .c-child h2 {
+    font-weight: 400;
+    line-height: normal;
+}
+
+#entre-em-contato .subtitle {
+    margin-left: 46px;
+}
+
+#entre-em-contato ._form-branding {
+    display: none;
+}
+
+#entre-em-contato form {
+    background: unset !important;
+    padding: 0;
+}
+
+#entre-em-contato form ._form-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+#entre-em-contato form ._form-content label {
+    font-weight: 600 !important;
+}
+
+#entre-em-contato form ._form-content ._form_element:nth-child(1),
+#entre-em-contato form ._form-content ._form_element:nth-child(2) {
+    width: 47.828%;
+}
+
+#entre-em-contato form ._form-content input[type="text"] {
+    border: 1px solid #E9EAF0 !important;
+    color: #000 !important;
+    height: 40px;
+    padding: 8px 14px;
+}
+
+#entre-em-contato form ._form-content textarea {
+    border: 1px solid #E9EAF0 !important;
+    color: #000 !important;
+    height: 80px;
+    padding: 8px 14px;
+}
+
+#entre-em-contato form ._form-content input[type="text"]::placeholder,
+#entre-em-contato form ._form-content textarea::placeholder {
+    color: #5E6170 !important;
+}
+
+#entre-em-contato form ._form-content ._submit {
+    width: 100%;
+    background: #1EAFBE !important;
+    height: 47px;
+    transition: all .4s;
+}
+
+#entre-em-contato form ._form-content ._submit:hover {
+    background: rgba(31,175,190,0.86) !important;
+}
+
+@media(max-width: 767px) {
+    #entre-em-contato .container {
+        flex-direction: column;
+    }
+
+    #entre-em-contato .container h2 br {
+        display: none;
+    }
+
+    #entre-em-contato .c-child {
+        width: 100%;
+    }
+    
+    #entre-em-contato form ._form-content ._form_element:nth-child(1),
+    #entre-em-contato form ._form-content ._form_element:nth-child(2) {
+        width: 100%;
+    }
+}

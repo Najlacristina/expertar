@@ -1,0 +1,140 @@
+@import url('/assets/css/components.css');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", sans-serif !important;
+    box-sizing: border-box;
+    line-height: 150%;
+}
+
+:root {
+    --global-color-one: #1EAFBE;
+    --global-color-two: #005569;
+    --global-color-three: #001E3C;
+    --global-color-text: #5E6170;
+    --global-color-white: #FFF;
+    --global-color-black: #000;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    padding: 60px 0px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-weight: 600;
+}
+
+.subtitle {
+    position: relative;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--global-color-three);
+}
+
+.subtitle::before,
+.double::after {
+    content: "";
+    width: 32px;
+    height: 1px;
+    
+    position: absolute;
+    top: 50%;
+    
+    transform: translatey(-50%);
+    
+    background-color: var(--global-color-one);
+}
+
+.subtitle::before {
+    left: -46px;
+}
+
+.double::after {
+    right: -46px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: medium;
+}
+
+p {
+    font-size: 16px;
+    color: var(--global-color-text) !important;
+    line-height: 150%;
+}
+
+@media(max-width: 767px) {
+    .container {
+        padding: 30px 20px;
+        width: 100% !important;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subtitle::before,
+    .double::after {
+        width: 64px;
+        top: 50%;
+    }
+
+    .subtitle::before {
+        left: -78px;
+    }
+    
+    .double::after {
+        right: -78px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* CSS PARA AS PÁGINAS DE POLÍTICAS */
+.politicas-menu .nav-links a {
+    color: #000 !important;
+}
+
+.politicas .container {
+    width: 750px;
+    background-color: #f2f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 60px 0px;
+}
+
+.politicas .container h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.politicas .container pre {
+    word-wrap: break-word;
+    white-space: pre-line;
+    font-size: 16px;
+    color: var(--global-color-text);
+    margin-top: 30px;
+
+}
