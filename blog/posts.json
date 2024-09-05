@@ -3,22 +3,11 @@
         "title": "Quarteto fantástico: as 4 substâncias que deixam seu cérebro sensacional!",
         "summary": "Você já se preocupou em como produzir as melhores substâncias cerebrais para o seu bem estar?! Vou te ajudar nessa jornada, bora lá?!",
         "author": "Edi Born",
-        "date": "24 de agosto, 2024",
+        "date": "28 de junho, 2021",
         "category": "PNL",
         "image": "quarteto-fantastico-pnl.png",
-        "slug": "quarteto-fantastico",
+        "slug": "quarteto-fantastico-pnl",
         "keywords": ["neurotransmissores", "serotonina", "dopamina", "ocitocina", "endorfina"]
-    },
-    
-    {
-        "title": "Frases comentadas: o olhar da PNL através de grandes pensadores",
-        "summary": "Uma reflexão divertida e necesária! Frases de grandes pensadores associadas a conteúdos de Programação Neurolinguística!",
-        "author": "Najla El Ghoz",
-        "date": "25 de agosto, 2024",
-        "category": "Reflexões",
-        "image": "placeholder.jpg",
-        "slug": "frases-comentadas",
-        "keywords": ["aqui", "vai", "as", "palavras", "chaves", "87hsgdt"]
     },
 
 {
@@ -76,7 +65,7 @@
         "keywords": ["pressupostos", "Crenças da PNL", "porque fazer pnl", "tipos de curso", "mudança de vida"]
     },
 
-         {
+     {
         "title": "Neurociência da Felicidade",
         "summary": "A neurociência tem desenvolvido pesquisas ao longo das últimas décadas para descobrir os mecanismos cerebrais que nos proporcionam felicidade.",
         "author": "Najla El Ghoz",
@@ -84,6 +73,17 @@
         "category": "Reflexões",
         "image": "neurociencia-da-felicidade-pnl.png",
         "slug": "neurociencia-felicidade-pnl",
+        "keywords": ["neurociência", "felicidade", "ser feliz", "programar o cérebro", "pesquisa"]
+    },
+
+     {
+        "title": "Frases Neurolinguística - Parte 1",
+        "summary": "Uma reflexão divertida e necessária! Frases de grandes pensadores associadas a conteúdos de Programação Neurolinguística!",
+        "author": "Najla El Ghoz",
+        "date": "29 de setembro, 2021",
+        "category": "Reflexões",
+        "image": "frases-1-pnl.png",
+        "slug": "frases-neurolinguistica-pnl",
         "keywords": ["neurociência", "felicidade", "ser feliz", "programar o cérebro", "pesquisa"]
     }
 ]
