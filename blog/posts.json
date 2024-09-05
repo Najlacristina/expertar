@@ -38,7 +38,7 @@
         "author": "Edi Born",
         "date": "10 de fevereiro, 2021",
         "category": "PNL",
-        "image": "pressupostoss-pnl.png",
+        "image": "pressupostos-pnl.png",
         "slug": "pressupostos-pnl",
         "keywords": ["pressupostos", "Crenças da PNL", "pilares", "o mapa não é o territorio", "responsabilidade da comunicação", "flexibilidade", "integral e sitemico"]
     },
@@ -55,13 +55,35 @@
     },
     
     {
-        "title": "Frases comentadas: o olhar da PNL através de grandes pensadores",
-        "summary": "Uma reflexão divertida e necesária! Frases de grandes pensadores associadas a conteúdos de PNL!",
+        "title": "Descubra as 3 partes do cérebro que comandam sua vida",
+        "summary": "Alguma vez já se questionou porque aprendeu algumas coisas e outras não?! E se eu te disser que é possível você aprender mais, de maneira muito mais fácil...",
+        "author": "Najla El Ghoz",
+        "date": "10 de março, 2021",
+        "category": "Reflexões",
+        "image": "aprender-pnl.png",
+        "slug": "aprendizado-pnl",
+        "keywords": ["aprender", "aprendizagem", "piramide", "processo", "sei que não sei", "sei que sei", "inconsciênte", "consciênte"]
+    },
+
+     {
+        "title": "Porque fazer PNL? Descubra se ela é para você!",
+        "summary": "Quando as pessoas me perguntam o porquê devem fazer PNL minha resposta é simples e direta: Porque mudou a minha vida e pode Transformar a sua também!",
         "author": "Edi Born",
-        "date": "26 de agosto, 2024",
+        "date": "18 de abril, 2022",
         "category": "Dicas Rápidas",
-        "image": "placeholder.jpg",
-        "slug": "modelo",
-        "keywords": ["aqui", "vai", "as", "palavras", "chaves", "hejudo1258", "modelo"]
+        "image": "porque-fazer-pnl.png",
+        "slug": "porque-fazer-pnl",
+        "keywords": ["pressupostos", "Crenças da PNL", "porque fazer pnl", "tipos de curso", "mudança de vida"]
+    },
+
+         {
+        "title": "Neurociência da Felicidade",
+        "summary": "A neurociência tem desenvolvido pesquisas ao longo das últimas décadas para descobrir os mecanismos cerebrais que nos proporcionam felicidade.",
+        "author": "Najla El Ghoz",
+        "date": "05 de maio, 2021",
+        "category": "Reflexões",
+        "image": "neurociencia-da-felicidade-pnl.png",
+        "slug": "neurociencia-felicidade-pnl",
+        "keywords": ["neurociência", "felicidade", "ser feliz", "programar o cérebro", "pesquisa"]
     }
 ]
