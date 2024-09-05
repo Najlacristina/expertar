@@ -25,11 +25,33 @@
         "title": "6 variáveis que governam a sua vida",
         "summary": "Você sabia que para qualquer decisão que você toma na vida 6 variáveis interferem na sua escolha? Venha descobrir como ajustá-las a seu favor.",
         "author": "Najla El Ghoz",
-        "date": "20 de junho, 202o",
+        "date": "20 de junho, 2020",
         "category": "PNL",
         "image": "niveis-neurologicos-pnl.png",
         "slug": "niveis-neurologicos-pnl",
         "keywords": ["Níveis neurológicos", "ambiente", "crenças", "valores", "comportamentos", "identidade", "sistema"]
+    },
+
+    {
+        "title": "Desvendando os Pressupostos da PNL",
+        "summary": "Descubra as bases da Programação Neurolinguística que podem Transformar a sua Vida!"",
+        "author": "Edi Born",
+        "date": "10 de fevereiro, 2021",
+        "category": "PNL",
+        "image": "pressupostoss-pnl.png",
+        "slug": "pressupostos-pnl",
+        "keywords": ["pressupostos", "Crenças da PNL", "pilares", "o mapa não é o territorio", "responsabilidade da comunicação", "flexibilidade", "integral e sitemico"]
+    },
+
+{
+        "title": "Descubra as 3 partes do cérebro que comandam sua vida",
+        "summary": "Alguma vez você já se questionou como são processadas as ideias dentro do seu cérebro? O neurocientista Paul MacLean descobriu",
+        "author": "Najla El Ghoz",
+        "date": "08 de março, 2021",
+        "category": "PNL",
+        "image": "cerebro-trino-pnl.png",
+        "slug": "cerebro-trino-pnl",
+        "keywords": ["Cérebro trino", "cerebro triuno", "trino", "reptiliano", "límbico", "córtex", "neocórtex"]
     },
     
     {
