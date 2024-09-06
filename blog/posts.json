@@ -119,12 +119,34 @@
         "slug": "pnl-mudou-minha-vida",
         "keywords": ["pressupostos", "Crenças da PNL", "porque fazer pnl", "tipos de curso", "mudança de vida"]
     },
+    
+      {
+        "title": "A medida do Sucesso",
+        "summary": "Qual é a sua unidade de medida de Sucesso? A felicidade é uma forma abstrata de sucesso que, quem sente sabe do que estou falando.. Veja mais",
+        "author": "Edi Born",
+        "date": "16 de junho, 2020",
+        "category": "Reflexões",
+        "image": "sucesso-pnl.png",
+        "slug": "sucesso-pnl",
+        "keywords": ["sucesso", "pnl", "medida de sucesso", "dinheiro", "felicidade", "subjetividade", "escolhas", "medidas", ]
+    },
+
+      {
+        "title": "Ferramentas de PNL",
+        "summary": "Aqui você encontra um resumo de algumas das ferramentas e estratégias básicas da PNL",
+        "author": "Najla El Ghoz",
+        "date": "11 de outubro, 2020",
+        "category": "Dicas Rápidas",
+        "image": "ferramentas-pnl.png",
+        "slug": "ferramentas-pnl",
+        "keywords": ["ferramentas", "pnl", "objetivos", "ancoragem", "crenças", "tots", "avaliação", "neurolinguística", "método", "práticas", "conteúdo" ]
+    },
 
         {
         "title": "Afinal, o que é a PNL?",
         "summary": "A definição de Programação Neurolinguistica de forma Clara e Simples",
         "author": "Daniel Duarte",
-        "date": "07 de março, 2023",
+        "date": "07 de março, 2024",
         "category": "Dicas Rápidas",
         "image": "o-que-e-pnl.png",
         "slug": "o-que-e-pnl",
