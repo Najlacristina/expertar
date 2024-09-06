@@ -111,13 +111,24 @@
     
       {
         "title": "Como a PNL mudou minha vida?",
-        "summary": "Quando as pessoas me perguntam o porquê devem fazer PNL minha resposta é simples e direta: Porque mudou a minha vida e pode Transformar a sua também!",
+        "summary": "Um relato pessoal de como o meu cainho se cruzou com a PNL",
         "author": "Daniel Duarte",
         "date": "30 de novembro, 2023",
         "category": "Dicas Rápidas",
         "image": "mudou-vida-pnl.png",
         "slug": "pnl-mudou-minha-vida",
         "keywords": ["pressupostos", "Crenças da PNL", "porque fazer pnl", "tipos de curso", "mudança de vida"]
+    },
+
+        {
+        "title": "Afinal, o que é a PNL?",
+        "summary": "A definição de Programação Neurolinguistica de forma Clara e Simples",
+        "author": "Daniel Duarte",
+        "date": "07 de março, 2023",
+        "category": "Dicas Rápidas",
+        "image": "o-que-e-pnl.png",
+        "slug": "o-que-e-pnl",
+        "keywords": ["pressupostos", "Crenças da PNL", "porque fazer pnl", "tipos de curso", "o que é pnl?"]
     }
 
 ]
