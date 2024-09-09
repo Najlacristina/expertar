@@ -36,18 +36,21 @@ del {
 }
 
 /* HEADER STYLE */
-#hero #header-home {
-    position: absolute;
+#hero .container-menu {
+    right: 0 !important;
+}
 
-    top: 0px;
-    left: 0;
-    width: 100%;
-    max-width: 100% !important;
+#hero .container-menu.scrolled nav h6,
+#hero .container-menu.scrolled nav .nav-links a {
+    color: #000 !important;
+}
+
+#hero #header-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    padding: 20px 0px;
+    padding: 0px;
 }
 
 #hero #header-home .logo {
@@ -56,6 +59,7 @@ del {
     align-items: center;
     color: var(--global-color-white);
     gap: 20px;
+    white-space: nowrap;
 }
 
 #hero #header-home a {
@@ -121,21 +125,31 @@ del {
         background-position: center;
     }
 
-    #hero #header-home {
-        padding: 10px;
+    #hero .container-menu nav h6 {
+        font-size: 14px !important;
     }
 
-    .line1 {
+    #hero #header-home {
+        padding: 10px;
+        align-items: start;
+    }
+
+    #hero #header-home .logo {
+        gap: 10px;
+    }
+
+    #hero .container-menu .line1,
+    #hero .container-menu .line2,
+    #hero .container-menu .line3 {
         background-color: #fff !important;
+    }
+
+    #hero .container-menu.scrolled .line1,
+    #hero .container-menu.scrolled .line2,
+    #hero .container-menu.scrolled .line3 {
+        background-color: #000 !important;
     }
     
-    .line2 {
-        background-color: #fff !important;
-    }
-    
-    .line3 {
-        background-color: #fff !important;
-    }
 
     #hero #content-wrapper #content {
         width: 100%;
