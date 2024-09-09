@@ -109,8 +109,15 @@ p {
     h2 {
         font-size: 24px;
     }
+
+    .base-menu {
+        min-height: 85px;
+    }
 }
 
+.base-menu {
+    min-height: 90px;
+}
 
 /* CSS PARA AS PÁGINAS DE POLÍTICAS */
 .politicas-menu .nav-links a {
