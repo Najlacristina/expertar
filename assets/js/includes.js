@@ -13,7 +13,7 @@ async function load_includes(filePath, targetSelector) {
             element.innerHTML = htmlContent;
         });
     } catch (error) {
-        // console.error('Erro:', error);
+        console.error('Erro:', error);
     }
 }
 
@@ -35,7 +35,7 @@ async function load_author_includes(filePath, targetSelector, authorName, postCo
             element.innerHTML = htmlContent;
         });
     } catch (error) {
-        // console.error('Erro:', error);
+        console.error('Erro:', error);
     }
 }
 
@@ -61,7 +61,7 @@ async function countPosts() {
 
         return authorPostCount;
     } catch (error) {
-        // console.error('Erro:', error);
+        console.error('Erro:', error);
         return {};
     }
 }
@@ -75,7 +75,7 @@ async function initializeAuthors() {
         // Substitua espaços por hífens e converta para minúsculas para corresponder ao nome do arquivo
         const targetSelector = author.toLowerCase().replace(/\s+/g, '-');
         const postCount = authorPostCount[author];
-        const filePath = `../includes/autores/${targetSelector}.html`;
+        const filePath = `/includes/autores/${targetSelector}.html`;
 
         load_author_includes(filePath, targetSelector, author, postCount);
     });
@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAuthors();
     
     // Carregar depoimentos, aliados, monitores e footer
-    load_includes('../includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
-    load_includes('../includes/aliados.html', 'aliados-monitores');
-    load_includes('../includes/footer.html', 'footer');
+    load_includes('includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
+    load_includes('includes/aliados.html', 'aliados-monitores');
+    load_includes('includes/footer.html', 'footer');
     
 });
