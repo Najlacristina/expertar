@@ -1,164 +1,177 @@
-// Função para carregar o conteúdo de um arquivo HTML e inseri-lo nos elementos alvo
-async function load_includes(filePath, targetSelector) {
+const hamburgers = document.querySelectorAll(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburgers.forEach((hamburger) => {
+    hamburger.addEventListener('click', ()=>{
+        //Animate Links
+         navLinks.classList.toggle("open");
+         links.forEach(link => {
+             link.classList.toggle("fade");
+         });
+     
+         //Hamburger Animation
+         hamburger.classList.toggle("toggle");
+     });
+});
+
+
+// SCRIPT REFERENTE AO SLIDE DE DEPOIMENTOS
+var swiper = new Swiper(".depoimentos-wrapper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    centeredSlides: false,
+});
+
+
+// SCRIPT QUE CRIA OS CARDS DOS POSTS
+// Função para carregar o JSON de posts
+async function loadPosts() {
     try {
-        const response = await fetch(filePath);
+        const response = await fetch('posts.json');
         if (!response.ok) {
-            throw new Error(`Erro ao carregar ${filePath}`);
-        }
-        const htmlContent = await response.text();
-
-        // Inserir o conteúdo em todos os elementos que correspondem ao seletor
-        const targetElements = document.querySelectorAll(`.${targetSelector}`);
-        targetElements.forEach(element => {
-            element.innerHTML = htmlContent;
-        });
-    } catch (error) {
-        // console.error('Erro:', error);
-    }
-}
-
-// Função para carregar o conteúdo de um arquivo HTML específico para autores e atualizar a contagem de posts
-async function load_author_includes(filePath, targetSelector, authorName, postCount) {
-    try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-            throw new Error(`Erro ao carregar ${filePath}`);
-        }
-        let htmlContent = await response.text();
-
-        // Atualizar o número de publicações no HTML do autor
-        htmlContent = htmlContent.replace(/<a href="#">Autor de \d+ <i>publicações<\/i><\/a>/, `<a href="#">Autor de ${postCount} <i>publicações</i></a>`);
-
-        // Inserir o conteúdo em todos os elementos que correspondem ao seletor
-        const targetElements = document.querySelectorAll(`.${targetSelector}`);
-        targetElements.forEach(element => {
-            element.innerHTML = htmlContent;
-        });
-    } catch (error) {
-        // console.error('Erro:', error);
-    }
-}
-
-// Função para contar o número de posts de cada autor
-async function countPosts() {
-    try {
-        const response = await fetch('expertar/blog/posts.json');
-        if (!response.ok) {
-            throw new Error('Erro ao carregar blog/posts.json');
+            throw new Error('Erro ao carregar /blog/posts.json');
         }
         const posts = await response.json();
-
-        // Contagem de posts por autor
-        const authorPostCount = {};
-        posts.forEach(post => {
-            const author = post.author;
-            if (authorPostCount[author]) {
-                authorPostCount[author]++;
-            } else {
-                authorPostCount[author] = 1;
-            }
-        });
-
-        return authorPostCount;
+        return posts;
     } catch (error) {
-        // console.error('Erro:', error);
-        return {};
+        console.error('Erro:', error);
+        return [];
     }
 }
 
-// Função principal para inicializar o carregamento dos modelos de autores
-async function initializeAuthors() {
-    const authorPostCount = await countPosts();
-
-    // Iterar sobre todas as seções de autores e carregar o conteúdo correspondente
-    Object.keys(authorPostCount).forEach(author => {
-        // Substitua espaços por hífens e converta para minúsculas para corresponder ao nome do arquivo
-        const targetSelector = author.toLowerCase().replace(/\s+/g, '-');
-        const postCount = authorPostCount[author];
-        const filePath = `/includes/autores/${targetSelector}.html`;
-
-        load_author_includes(filePath, targetSelector, author, postCount);
-    });
-}
-
-// CARREGAR HEADER
-load_includes('../includes/nav-links.html', 'nav-links');
-
-
-// Função para obter categorias únicas dos posts
-function getUniqueCategories(posts) {
-    const categories = new Set();
-    posts.forEach(post => {
-        categories.add(post.category);
-    });
-    return Array.from(categories);
-}
-
-// Função para renderizar as categorias e adicionar eventos de clique
-function renderCategories(categories, posts) {
-    const tagsWrapper = document.querySelector('.tags-wrapper');
-    
-    if (tagsWrapper) {
-        tagsWrapper.innerHTML = ''; // Limpa as categorias existentes
-        
-        const allTag = document.createElement('div');
-        allTag.className = 'tag-item active'; // Inicialmente, "Tudo" está ativo
-        allTag.textContent = 'Tudo';
-        tagsWrapper.appendChild(allTag);
-
-        categories.forEach(category => {
-            const tagItem = document.createElement('div');
-            tagItem.className = 'tag-item';
-            tagItem.textContent = category;
-            tagsWrapper.appendChild(tagItem);
-        });
-
-        // Adicionar eventos de clique a cada categoria
-        const tagItems = tagsWrapper.querySelectorAll('.tag-item');
-        tagItems.forEach(tag => {
-            tag.addEventListener('click', function() {
-                // Remove a classe 'active' de todas as categorias
-                tagItems.forEach(tag => tag.classList.remove('active'));
-                // Adiciona a classe 'active' à categoria clicada
-                this.classList.add('active');
-
-                // Filtrar os posts pela categoria selecionada
-                const filteredPosts = filterPostsByCategory(posts, this.textContent);
-                renderCards(filteredPosts);
-            });
-        });
-    }
-}
-
-
-// Inicializar a criação dos cards com busca e categorias dinâmicas
-async function initSearchAndCategories() {
+// Função para criar os cards a partir dos posts
+async function createCards() {
     const posts = await loadPosts();
-    
-    // Renderizar as categorias dinâmicas e configurar eventos de clique
-    const uniqueCategories = getUniqueCategories(posts);
-    renderCategories(uniqueCategories, posts);
-    
-    // Renderizar todos os posts inicialmente
-    renderCards(posts);
+    const cardsContainer = document.querySelector('#cards .cards-wrapper');
 
-    // Configurar o sistema de busca
+    if (cardsContainer) {
+        posts.forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'card-item';
+            card.innerHTML = `
+                <a href="/blog/${post.slug}" class="card-link">
+                    <div class="card-header">
+                        <img src="/blog/assets/images/${post.image}" alt="${post.title}">
+                        <div class="tag-category">${post.category}</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>${post.title}</h4>
+                        <p>${post.summary}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author"><img src="/blog/assets/images/${post.author.toLowerCase().replace(/\s+/g, '-')}.jpg" alt="${post.author}"><h6>${post.author}</h6></div>
+                        <div class="divider"></div>
+                        <div class="post-date">${post.date}</div>
+                    </div>
+                </a>
+            `;
+            cardsContainer.appendChild(card);
+        });
+    }
+}
+
+// Inicializar a criação dos cards
+createCards();
+
+
+// Função para filtrar os posts conforme o termo de busca
+function filterPosts(posts, searchTerm) {
+    return posts.filter(post => 
+        post.title.toLowerCase().includes(searchTerm) ||
+        post.summary.toLowerCase().includes(searchTerm) ||
+        post.author.toLowerCase().includes(searchTerm) ||
+        post.category.toLowerCase().includes(searchTerm) ||
+        post.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm))
+    );
+}
+
+
+// Função para renderizar os cards filtrados
+function renderCards(filteredPosts) {
+    const cardsContainer = document.querySelector('#cards .cards-wrapper');
+    cardsContainer.innerHTML = ''; // Limpa os cards existentes
+
+    if (filteredPosts.length === 0) {
+        const noResultsMessage = document.createElement('div');
+        noResultsMessage.className = 'no-results';
+        noResultsMessage.innerText = 'Nenhum post encontrado, revise os termos da busca.';
+        cardsContainer.appendChild(noResultsMessage);
+    } else {
+        filteredPosts.forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'card-item';
+            card.innerHTML = `
+                <a href="/blog/${post.slug}" class="card-link">
+                    <div class="card-header">
+                        <img src="/blog/assets/images/${post.image}" alt="${post.title}">
+                        <div class="tag-category">${post.category}</div>
+                    </div>
+                    <div class="card-content">
+                        <h4>${post.title}</h4>
+                        <p>${post.summary}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author"><img src="/blog/assets/images/${post.author.toLowerCase().replace(/\s+/g, '-')}.jpg" alt="${post.author}"><h6>${post.author}</h6></div>
+                        <div class="divider"></div>
+                        <div class="post-date">${post.date}</div>
+                    </div>
+                </a>
+            `;
+            cardsContainer.appendChild(card);
+        });
+    }
+}
+
+
+// Inicializar a criação dos cards com busca
+async function initSearchAndCards() {
+    const posts = await loadPosts();
+    renderCards(posts); // Renderiza todos os posts inicialmente
+
     const searchInput = document.getElementById('search-input');
     searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.toLowerCase();
         const filteredPosts = filterPosts(posts, searchTerm);
-        renderCards(filteredPosts);
+        renderCards(filteredPosts); // Renderiza os posts filtrados
     });
 }
 
-// Carregar categorias, autores e outros conteúdos ao carregar a página
+initSearchAndCards();
+
+// Função para filtrar os posts conforme a categoria
+function filterPostsByCategory(posts, category) {
+    if (category === 'Tudo') {
+        return posts; // Se a categoria for "Tudo", retorna todos os posts
+    }
+    return posts.filter(post => post.category === category);
+}
+
+// COOKIES RULES
+console.log(document.cookie.split('; ').find(row => row.startsWith('cookiesAccepted=')));
 document.addEventListener('DOMContentLoaded', function() {
-    initSearchAndCategories();
-    initializeAuthors();
-    
-    // Carregar depoimentos, aliados, monitores e footer
-    load_includes('../includes/depoimentos.html', 'depoimentos-wrapper .swiper-wrapper');
-    load_includes('../includes/aliados.html', 'aliados-monitores');
-    load_includes('../includes/footer.html', 'footer');
-    
+    if(!document.cookie.split('; ').find(row => row.startsWith('cookiesAccepted='))) {
+        console.log('Cookie Not ok');
+        document.getElementById('cookie-banner').classList.remove('hidden');
+    }
+
+
+    // Adicionar evento de clique ao botão "OK"
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        // Esconder o banner
+        document.getElementById('cookie-banner').classList.add('hidden');
+        // Definir o cookie "cookiesAccepted"
+        document.cookie = "cookiesAccepted=true; max-age=" + 60 * 60 * 24 * 30 + "; path=/"; // Expira em 30 dias
+    });
+});
+
+// ANIMAÇÃO MENU
+window.addEventListener('scroll', function() {
+    var minhaDiv = document.querySelector('.container-menu');
+
+    if (window.scrollY > 50) {
+      minhaDiv.classList.add('scrolled');
+    } else {
+      minhaDiv.classList.remove('scrolled');
+    }
 });
