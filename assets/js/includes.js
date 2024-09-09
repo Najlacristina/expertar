@@ -13,7 +13,7 @@ async function load_includes(filePath, targetSelector) {
             element.innerHTML = htmlContent;
         });
     } catch (error) {
-        console.error('Erro:', error);
+        // console.error('Erro:', error);
     }
 }
 
@@ -35,7 +35,7 @@ async function load_author_includes(filePath, targetSelector, authorName, postCo
             element.innerHTML = htmlContent;
         });
     } catch (error) {
-        console.error('Erro:', error);
+        // console.error('Erro:', error);
     }
 }
 
@@ -61,7 +61,7 @@ async function countPosts() {
 
         return authorPostCount;
     } catch (error) {
-        console.error('Erro:', error);
+        // console.error('Erro:', error);
         return {};
     }
 }
