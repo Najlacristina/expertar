@@ -138,3 +138,15 @@ p {
     margin-top: 30px;
 
 }
+
+.page404 {
+    height: 80vh;
+}
+
+.page404 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
