@@ -1,3 +1,20 @@
+const hamburgers = document.querySelectorAll(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburgers.forEach((hamburger) => {
+    hamburger.addEventListener('click', ()=>{
+        //Animate Links
+         navLinks.classList.toggle("open");
+         links.forEach(link => {
+             link.classList.toggle("fade");
+         });
+     
+         //Hamburger Animation
+         hamburger.classList.toggle("toggle");
+     });
+});
+
 function updateFaqStyles() {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -44,4 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Definir o cookie "cookiesAccepted"
         document.cookie = "cookiesAccepted=true; max-age=" + 60 * 60 * 24 * 30 + "; path=/"; // Expira em 30 dias
     });
+});
+
+// ANIMAÇÃO MENU
+window.addEventListener('scroll', function() {
+    var minhaDiv = document.querySelector('.container-menu');
+
+    if (window.scrollY > 50) {
+      minhaDiv.classList.add('scrolled');
+    } else {
+      minhaDiv.classList.remove('scrolled');
+    }
 });
