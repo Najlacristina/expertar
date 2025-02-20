@@ -578,7 +578,33 @@
 
 }
 
+/* MARCAS PARCEIRAS */
 
+.fotos-aulas {
+    overflow: hidden;
+    padding-bottom: 60px;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+.fotos-aulas .fotos-aulas-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+.fotos-aulas  img {
+    border-radius: 10px;
+}
 
 /* ENTRE EM CONTATO */
 #entre-em-contato {
