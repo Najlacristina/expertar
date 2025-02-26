@@ -581,29 +581,34 @@
 /* MARCAS PARCEIRAS */
 
 .fotos-aulas {
-    overflow: hidden;
+    overflow: hidden; /* Garante que não haja rolagem lateral */
     padding-bottom: 60px;
     background: white;
-    white-space: nowrap;
     position: relative;
+    max-width: 100%; /* Impede que a seção ultrapasse a largura da tela */
 }
 
 .fotos-aulas .fotos-aulas-slide {
-    display: inline-block;
+    display: flex; /* Usa flexbox para alinhar as imagens */
+    flex-wrap: nowrap; /* Mantém as imagens em linha */
+    gap: 20px; /* Adiciona um pequeno espaço entre as imagens */
     animation: 35s slide infinite linear;
+    width: max-content; /* Ajusta a largura apenas ao conteúdo necessário */
 }
 
 @keyframes slide {
     from {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+        transform: translateX(calc(-100% + 100vw)); /* Evita deslocamento excessivo */
     }
-  }
+}
 
-.fotos-aulas  img {
+.fotos-aulas img {
     border-radius: 10px;
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto;
 }
 
 /* ENTRE EM CONTATO */
