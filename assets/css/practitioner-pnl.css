@@ -732,13 +732,16 @@ del {
     overflow: hidden;
     padding-bottom: 60px;
     background: white;
-    white-space: nowrap;
+    max-width: 100%;
     position: relative;
 }
 
 .fotos-aulas .fotos-aulas-slide {
-    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
     animation: 35s slide infinite linear;
+    width: max-content;
 }
 
 @keyframes slide {
@@ -746,7 +749,9 @@ del {
       transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+        transform: translateX(calc(-100% + 100vw);
+        max-width: 100%;
+        height: auto;
     }
   }
 
