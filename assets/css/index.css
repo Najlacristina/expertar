@@ -580,7 +580,7 @@
 
 /* MARCAS PARCEIRAS */
 
-.fotos-marcas {
+.fotos-aulas {
     overflow: hidden; /* Garante que não haja rolagem lateral */
     padding-bottom: 60px;
     background: white;
@@ -588,7 +588,7 @@
     max-width: 100%; /* Impede que a seção ultrapasse a largura da tela */
 }
 
-.fotos-marcas .fotos-marcas-slide {
+.fotos-aulas .fotos-aulas-slide {
     display: flex; /* Usa flexbox para alinhar as imagens */
     flex-wrap: nowrap; /* Mantém as imagens em linha */
     gap: 20px; /* Adiciona um pequeno espaço entre as imagens */
@@ -605,7 +605,7 @@
     }
 }
 
-.fotos-marcas img {
+.fotos-aulas img {
     border-radius: 10px;
     max-width: 100%; /* Garante que as imagens não ultrapassem o container */
     height: auto;
