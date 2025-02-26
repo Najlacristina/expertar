@@ -605,7 +605,7 @@
     }
 }
 
-.fotos-aulas img {
+.fotos-marcas img {
     border-radius: 10px;
     max-width: 100%; /* Garante que as imagens não ultrapassem o container */
     height: auto;
