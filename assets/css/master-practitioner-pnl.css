@@ -1094,3 +1094,36 @@ del {
         width: 100%;
     }
 }
+
+/* MARCAS PARCEIRAS */
+
+.fotos-marcas {
+    overflow: hidden; /* Garante que não haja rolagem lateral */
+    padding-bottom: 60px;
+    background: white;
+    position: relative;
+    max-width: 100%; /* Impede que a seção ultrapasse a largura da tela */
+}
+
+.fotos-marcas .fotos-marcas-slide {
+    display: flex; /* Usa flexbox para alinhar as imagens */
+    flex-wrap: nowrap; /* Mantém as imagens em linha */
+    gap: 20px; /* Adiciona um pequeno espaço entre as imagens */
+    animation: 35s slide infinite linear;
+    width: max-content; /* Ajusta a largura apenas ao conteúdo necessário */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw)); /* Evita deslocamento excessivo */
+    }
+}
+
+.fotos-marcas img {
+    border-radius: 10px;
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+    height: auto;
+}
