@@ -20,7 +20,7 @@ del {
 #hero {
     position: relative;
     height: 650px;
-    background-image: url('../images/bg-practitioner-pnl.jpg');
+    background-image: url('../images/bg-master-practitioner-pnl.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -121,7 +121,7 @@ del {
     #hero {
         height: unset !important;
         min-height: 550px;
-        background-image: url('../images/bg-practitioner-pnl-mobile.jpg');
+        background-image: url('../images/bg-master-practitioner-pnl-mobile.jpg');
         background-position: center;
     }
 
