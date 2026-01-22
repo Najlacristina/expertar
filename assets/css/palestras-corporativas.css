@@ -76,3 +76,9 @@ footer{padding:42px 0;color:#6b7280}
   padding-left: 24px;
   padding-right: 24px;
 }
+
+/* Evita somar padding da .container com padding da section */
+.page-palestras-corporativas .container{
+  padding-top: 0;
+  padding-bottom: 0;
+}
