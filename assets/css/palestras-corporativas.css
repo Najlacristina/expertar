@@ -69,3 +69,10 @@ section{padding:72px 0}
 
 footer{padding:42px 0;color:#6b7280}
 .muted{color:var(--ex-muted);font-size:.95rem}
+
+/* Centralizar containers desta página no desktop */
+.container{
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
