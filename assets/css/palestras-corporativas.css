@@ -1,4 +1,16 @@
-<!-- Estilo alinhado à identidade atual da eXpertar (tipos fortes, contraste alto, CTA destacado) -->
+:root{
+  --ex-primary: var(--global-color-one);   /* #1EAFBE */
+  --ex-secondary: var(--global-color-two); /* #005569 */
+  --ex-dark: var(--global-color-three);    /* #001E3C */
+  --ex-muted: var(--global-color-text);
+  --ex-soft: #f6f7fb;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+
+/*  Estilo alinhado à identidade atual da eXpertar (tipos fortes, contraste alto, CTA destacado) */
 .btn{display:inline-block;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none}
 .btn--primary{background:var(--ex-primary);color:#fff;box-shadow:var(--shadow)}
 .btn--ghost{border:2px solid var(--ex-primary);color:var(--ex-primary)}
