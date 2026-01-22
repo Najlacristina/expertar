@@ -89,8 +89,16 @@ footer{padding:42px 0;color:#6b7280}
   padding-right: 24px;
 }
 
-/* Evita somar padding da .container com padding da section */
+/* não mexa em TODO .container da página */
 .page-palestras-corporativas .container{
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* zera padding só nos containers das SECTIONS do conteúdo */
+.page-palestras-corporativas section > .container{
   padding-top: 0;
   padding-bottom: 0;
 }
+
