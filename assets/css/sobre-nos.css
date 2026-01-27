@@ -427,5 +427,102 @@
   margin-bottom: 48px;
 }
 
+/* ======================================
+   AVALIAÇÕES GOOGLE — REFINO FINAL
+   (cole no final do sobre-nos.css)
+====================================== */
+
+/* 1) Subtitle "Avaliações" centralizado + linhas */
+#avaliacoes-google .subtitle.double{
+  width: 100%;
+  text-align: center;
+  margin-left: 0 !important; /* remove o deslocamento padrão do .subtitle */
+  display: inline-block;
+}
+
+/* Ajusta as “linhas” do subtitle para centralizar */
+#avaliacoes-google .subtitle.double::before{
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -120px; /* controla a distância para esquerda */
+}
+
+#avaliacoes-google .subtitle.double::after{
+  right: 50%;
+  transform: translate(50%, -50%);
+  margin-right: -120px; /* controla a distância para direita */
+}
+
+/* Responsivo: aumenta as linhas e afasta um pouco */
+@media (max-width: 767px){
+  #avaliacoes-google .subtitle.double::before{ margin-left: -140px; }
+  #avaliacoes-google .subtitle.double::after{ margin-right: -140px; }
+}
+
+/* 2) Centralizar títulos/textos e reduzir espaço entre eles */
+#avaliacoes-google h2{
+  text-align: center;
+  margin: 8px 0 0;        /* reduz espaço abaixo do subtitle */
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#avaliacoes-google p{
+  text-align: center;
+  max-width: 820px;
+  margin: 8px auto 0;     /* reduz o espaço entre h2 e parágrafo */
+}
+
+/* 3) Diminuir “padding até o botão” e aumentar “depois do botão” */
+#avaliacoes-google .ag-cta{
+  justify-content: center;
+  margin-top: 14px;       /* menos espaço antes do botão */
+  margin-bottom: 38px;    /* mais espaço depois do botão (antes da strip/cards) */
+  text-align: center;
+}
+
+/* 4) Largura consistente: strip e grid com o MESMO limite */
+#avaliacoes-google .ag-strip,
+#avaliacoes-google .ag-grid{
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Espaço entre "Transparência total" e o primeiro card */
+#avaliacoes-google .ag-strip{
+  margin-top: 24px;       /* cria o respiro após a CTA */
+  margin-bottom: 22px;    /* espaço entre strip e cards */
+}
+
+/* Espaço e alinhamento do grid */
+#avaliacoes-google .ag-grid{
+  margin-top: 0;          /* quem manda no espaço é a strip acima */
+  gap: 18px;
+}
+
+/* 5) (Opcional) Melhorar consistência dos cards (sem cortar conteúdo no mobile) */
+@media (min-width: 980px){
+  #avaliacoes-google .ag-card{
+    min-height: 260px;
+  }
+}
+
+/* 6) Link “Conhecer as formações” mais alinhado e com hover */
+#avaliacoes-google .ag-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+#avaliacoes-google .ag-link:hover{
+  background: rgba(30,175,190,.08);
+}
+
+
 
 
