@@ -477,7 +477,7 @@
 #avaliacoes-google .ag-cta{
   justify-content: center;
   margin-top: 14px;       /* menos espaço antes do botão */
-  margin-bottom: 38px;    /* mais espaço depois do botão (antes da strip/cards) */
+  margin-bottom: 28px;    /* mais espaço depois do botão (antes da strip/cards) */
   text-align: center;
 }
 
@@ -522,6 +522,7 @@
 #avaliacoes-google .ag-link:hover{
   background: rgba(30,175,190,.08);
 }
+
 
 
 
