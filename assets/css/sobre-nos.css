@@ -370,3 +370,34 @@
   color:var(--global-color-text);
   font-size:14px;
 }
+/* =========================
+   AVALIAÇÕES GOOGLE (AJUSTES)
+   ========================= */
+
+/* Respiro lateral + centralização do grid */
+#avaliacoes-google .ag-grid{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Espaçamento do título para não “colar” na grid */
+#avaliacoes-google h2{
+  margin-bottom: 30px;
+}
+
+/* Espaço e alinhamento do CTA */
+#avaliacoes-google .ag-cta{
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* Padroniza um pouco a altura visual dos cards no desktop (opcional, mas melhora muito) */
+@media (min-width: 980px){
+  #avaliacoes-google .ag-text{
+    max-height: 140px;
+    overflow: hidden;
+  }
+}
+
