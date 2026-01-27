@@ -401,3 +401,31 @@
   }
 }
 
+/* =========================
+   AJUSTES DE HIERARQUIA – AVALIAÇÕES
+   ========================= */
+
+/* Centralização dos textos */
+#avaliacoes-google h2,
+#avaliacoes-google p{
+  text-align: center;
+}
+
+#avaliacoes-google p{
+  max-width: 820px;
+  margin: 12px auto 0;
+}
+
+/* Espaço entre texto introdutório e cards */
+#avaliacoes-google .ag-grid{
+  margin-top: 36px;
+}
+
+/* Ajuste fino do CTA */
+#avaliacoes-google .ag-cta{
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+
+
