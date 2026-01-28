@@ -431,3 +431,10 @@ section{padding:80px 0}
 .cta__box h2{margin:0 0 10px;color:#fff}
 .cta__box p{margin:0 auto 18px;max-width:820px;color:rgba(255,255,255,.88)}
 
+.logodasmarcas {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+
