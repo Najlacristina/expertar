@@ -421,3 +421,11 @@ section{padding:80px 0}
   gap: 16px;
 }
 
+body.page-palestras-corporativas .container-menu{
+  background: transparent;
+}
+
+body.page-palestras-corporativas .container-menu.scrolled{
+  background: #ffffff;
+}
+
