@@ -218,3 +218,15 @@
 .page-palestras-corporativas #menu .container-menu.scrolled .nav-links a{
   color: #001E3C;
 }
+
+.page-palestras-corporativas #menu .container-menu #header{
+  background: transparent;
+  transition: background-color .25s ease, box-shadow .25s ease;
+}
+
+.page-palestras-corporativas #menu .container-menu.scrolled #header{
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+}
+
