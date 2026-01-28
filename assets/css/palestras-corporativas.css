@@ -194,3 +194,27 @@
 @media (max-width:600px){
   .page-palestras-corporativas .logodasmarcas{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ===== MENU - Palestras Corporativas ===== */
+/* Estado inicial: transparente sobre o HERO escuro */
+.page-palestras-corporativas #menu .container-menu{
+  background: transparent;
+  transition: background-color .25s ease, box-shadow .25s ease;
+}
+
+/* Quando rola: fundo branco */
+.page-palestras-corporativas #menu .container-menu.scrolled{
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+}
+
+/* Ajuste de cor dos links (geralmente o hero é escuro, então começa “claro”) */
+.page-palestras-corporativas #menu .nav-links a{
+  color: #fff;
+}
+
+/* Ao rolar, fundo fica branco, então links ficam escuros */
+.page-palestras-corporativas #menu .container-menu.scrolled .nav-links a{
+  color: #001E3C;
+}
