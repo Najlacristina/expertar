@@ -379,7 +379,7 @@ section{padding:80px 0}
 .logos__grid img{
   width:100%;
   height:auto;
-  max-height:54px;
+  max-height:64px;
   object-fit:contain;
   filter: grayscale(100%);
   opacity:.90;
