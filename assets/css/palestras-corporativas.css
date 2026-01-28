@@ -230,34 +230,5 @@
   backdrop-filter: blur(8px);
 }
 
-/* ===== MENU (somente nesta página) ===== */
-.page-palestras-corporativas .container-menu{
-  background: transparent;               /* garante o estado inicial */
-  box-shadow: none;
-}
-
-/* Estado inicial: sobre o HERO escuro -> texto branco */
-.page-palestras-corporativas .container-menu .nav-links li a{
-  color: #fff !important;
-}
-.page-palestras-corporativas .container-menu .hamburger div{
-  background: #fff;
-}
-
-/* Quando rolar: fundo branco -> texto escuro */
-.page-palestras-corporativas .container-menu.scrolled{
-  background-color:#fff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-.page-palestras-corporativas .container-menu.scrolled .nav-links li a{
-  color: #16171E !important;
-}
-.page-palestras-corporativas .container-menu.scrolled .hamburger div{
-  background: #16171E;
-}
-
-.page-palestras-corporativas .base-menu{
-  display: none;
-}
 
 
