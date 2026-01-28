@@ -437,4 +437,32 @@ section{padding:80px 0}
   gap: 16px;
 }
 
+/* =========================================================
+   FIX MENU (somente nesta página)
+   - menu branco sobre HERO escuro
+   - volta para escuro quando scrolled (fundo branco)
+   ========================================================= */
+
+body.page-palestras-corporativas .container-menu:not(.scrolled) .nav-links li a{
+  color: rgba(255,255,255,.92) !important;
+}
+
+body.page-palestras-corporativas .container-menu:not(.scrolled) .hamburger div{
+  background: rgba(255,255,255,.92) !important;
+}
+
+/* opcional: melhora o contraste do hover no topo escuro */
+body.page-palestras-corporativas .container-menu:not(.scrolled) .nav-links li a:hover{
+  color: #fff !important;
+}
+
+/* quando desce e vira scrolled (fundo branco), mantém padrão escuro */
+body.page-palestras-corporativas .container-menu.scrolled .nav-links li a{
+  color: #16171E !important;
+}
+
+body.page-palestras-corporativas .container-menu.scrolled .hamburger div{
+  background: #16171E !important;
+}
+
 
