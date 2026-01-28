@@ -317,21 +317,6 @@ section{padding:80px 0}
   font-size:.78rem;
 }
 
-/* ====== Method ====== */
-.method__card{
-  border-radius:22px;
-  padding:26px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-}
-.method__card ul{
-  margin:14px 0 0;
-  padding-left:18px;
-  columns:2;
-  gap:26px;
-}
-.method__card li{break-inside:avoid;margin:9px 0}
-@media (max-width: 900px){ .method__card ul{columns:1} }
-
 /* ====== Formats ====== */
 .item{
   display:flex;
@@ -353,7 +338,7 @@ section{padding:80px 0}
 
 /* ====== Social proof ====== */
 .social{
-  background: linear-gradient(180deg, #fff 0%, #14171c 100%);
+  background: #fff;
   color:#fff;
 }
 .quote{
@@ -389,7 +374,7 @@ section{padding:80px 0}
   margin-top:12px;
   display:grid;
   grid-template-columns: repeat(6, 1fr);
-  gap:12px;
+  gap:6px;
   align-items:center;
 }
 .logos__grid img{
